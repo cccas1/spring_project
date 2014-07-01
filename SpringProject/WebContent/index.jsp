@@ -7,8 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<div id="">
-	${message}
-</div>
+Hello Grace An!
+
+<a href="./notice/springBoard.do">
+	<button type="button">
+		Go To Board
+	</button>
+</a>
 </body>
 </html>
