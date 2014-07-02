@@ -20,7 +20,7 @@
     
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">     
     	<property name="dataSource" ref="dataSource" />                                         
-    	<property name="mapperLocations" value="classpath:grace/an/**/mapper/*.xml" />  
+    	<property name="mapperLocations" value="classpath:grace/an/**/dao/impl/*.xml" />  
     	<property name="configLocation" value="/WEB-INF/classes/config/mybatis/mybatis-config.xml" />          
     	<property name="transactionFactory">                                                    
      		<bean class="org.apache.ibatis.transaction.managed.ManagedTransactionFactory" />
@@ -31,9 +31,4 @@
     	<constructor-arg index="0" ref="sqlSessionFactory" /> 
     </bean>
     
-	<!-- =========================== DAO DEFINITIONS : IBATIS IMPLEMENTATIONS ============ -->    
-
-    <bean id="boardDaoImpl" class="grace.an.board.dao.impl.BoardDaoImpl">                             
-        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
-    </bean>
 </beans>
