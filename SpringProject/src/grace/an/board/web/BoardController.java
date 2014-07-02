@@ -19,13 +19,13 @@ public class BoardController {
 	private static final Logger logger =  LoggerFactory.getLogger(BoardController.class);
 	
 	@Autowired
-	private BoardDaoImpl boardDaoImpl;
+	protected BoardDaoImpl boardDao;
 	
 	@RequestMapping("/notice/springBoard.do")
 	public void hello(@RequestParam Map<String, Object> paramMap, ModelMap model) throws Throwable{
 		model.put("message", "안녕");
 		model.put("button", "/notice/springBoards.do");
-		model.put("count", boardDaoImpl.countBoard());
+		model.put("count", boardDao.countBoard());
 	}
 	
 	@RequestMapping("/notice/springBoards.do")
@@ -33,7 +33,7 @@ public class BoardController {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("message", "그래");
 		mv.addObject("button", "/notice/springBoard.do");
-		mv.addObject("count", boardDaoImpl.countBoard());
+		mv.addObject("count", boardDao.countBoard());
 		mv.setViewName("/notice/springBoard");
 		return mv;
 	}

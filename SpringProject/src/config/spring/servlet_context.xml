@@ -14,8 +14,10 @@
 
 	<context:component-scan base-package="grace.an" use-default-filters="false">
 		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository" />
+		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service" />	
 	</context:component-scan>
-	
+		
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<mvc:annotation-driven>
 		<mvc:message-converters register-defaults="true">
