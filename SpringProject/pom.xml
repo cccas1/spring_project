@@ -68,6 +68,14 @@
       <version>${org.springframework-version}</version>
     </dependency>
  
+ 	<!-- DWR -->
+ 	<dependency>
+      <groupId>org.directwebremoting</groupId>
+      <artifactId>dwr</artifactId>
+      <version>3.0.0-rc3-SNAPSHOT</version>
+	</dependency>
+ 	
+ 
  	<!-- mybatis -->
  	<dependency>
 	  <groupId>org.mybatis</groupId>
@@ -264,6 +272,14 @@
     <repository>
       <id>mesir-repo</id>
       <url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
+    </repository>
+    <repository>
+      <!-- for dwr -->
+      <id>oss-sonatype-snapshots</id>
+      <name>OSS Sonatype Snapshots Repository</name>
+	  <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases><enabled>false</enabled></releases>
+      <snapshots><enabled>true</enabled></snapshots>
     </repository>
   </repositories>
   <build>
